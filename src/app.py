@@ -122,5 +122,5 @@ def unregister_from_activity(activity_name: str, email: str):
         raise HTTPException(status_code=400, detail="Student not registered for this activity")
     
     # Remove student
-    activity["participants"].remove(email)
+    activity["participants"].remove(email) 
     return {"message": f"Unregistered {email} from {activity_name}"}
